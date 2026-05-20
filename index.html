@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KG Narrenzunft Remagen von 1933 e.V.</title>
+    <style>
+        /* --- CSS Bereich --- */
+        :root {
+            --primary: #e3000f;   /* Vereinsfarbe Rot */
+            --secondary: #008a3b; /* Vereinsfarbe Grün */
+            --bg-light: #f8f9fa;
+            --text-dark: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcccc;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Hero Sektion */
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 6px solid var(--secondary);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #00662b;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+
+        .card h2 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .event-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Mobile Ansicht */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                padding: 1rem 0;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KG Narrenzunft</div>
+        <button class="menu-toggle" id="mobile-menu-btn">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#start">Startseite</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#veranstaltungen">Termine</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="start">
+        <h1>3x vun Hätze Remagen Alaaf!</h1>
+        <p>Willkommen bei der Großen Karnevalsgesellschaft Narrenzunft Remagen von 1933 e. V.<br>Wir feiern den echt fröhlichen rheinischen Humor.</p>
+        <a href="#veranstaltungen" class="btn">Zu den Veranstaltungen</a>
+    </section>
+
+    <main class="container">
+        <section id="ueber-uns" class="card">
+            <h2>Wer wir sind</h2>
+            <p>Die KG Narrenzunft wurde am 23. Februar 1933 gegründet. Wir blicken voller Stolz auf eine 90-jährige Vereinsgeschichte zurück.</p>
+            <br>
+            <p>Der Tradition verbunden sein heißt aber nicht, altmodisch zu sein. Heute besteht der Verein aus 6 aktiven Abteilungen und knapp 200 Mitgliedern, die sich für den Erhalt von Tradition und Karnevalsbrauchtum einsetzen.</p>
+        </section>
+
+        <section id="veranstaltungen" class="card">
+            <h2>Kommende Highlights</h2>
+            <div class="event-item">
+                <strong>Prunksitzung 2026</strong><br>
+                17.01.2026 | Rheinhalle Remagen
+            </div>
+            <div class="event-item">
+                <strong>Pänz Parade</strong><br>
+                18.01.2026 | Rheinhalle Remagen
+            </div>
+            <div class="event-item">
+                <strong>Karnevalszug Remagen</strong><br>
+                15.02.2026 | Remagen Innenstadt
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Logik für das mobile Menü
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navList = document.getElementById('nav-list');
+
+        menuBtn.addEventListener('click', () => {
+            // Schaltet die Klasse 'active' ein und aus
+            navList.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
